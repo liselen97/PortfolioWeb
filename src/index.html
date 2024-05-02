@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Liselen Pannella - Web Design</title>
+</head>
+<body class="text-white overflow-x-hidden">
+    <header class="flex justify-end items-center my-5 w-4/5 m-auto">
+        <!-- Ocultar el botón en pantallas de tamaño sm o más grandes -->
+        <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+            &#9776;
+        </button>
+        <nav class="hidden sm:block text-base space-x-8" aria-label="main">    
+            <a href="experience.html">Experiencia</a>
+            <a href="design.html">Diseño</a>
+            <a href="#">Ilustración y Fotografía</a>
+            <a href="#"> 
+                <span class="material-symbols-outlined">
+                palette
+                </span>
+            </a>
+        </nav>
+    </header>
+    <main class="w-4/5 m-auto">
+        <!-- Abstract/presentación -->
+        <section class="mt-20 flex justify-between flex-wrap w-full">
+            <div class="sm:w-1/2">
+                <h1 class="text-5xl font-bold mb-8">Hello World!</h1>
+                <p>Soy Liselen, una apasionada diseñadora web de Montevideo, Uruguay, con experiencia como Frontend Developer y Testing Specialist en IBM. Fuera del trabajo, encuentro inspiración en la fotografía, la ilustración, la danza y la música, así como de una buena taza de café.</p>
+            </div>
+            <div class="w-2/6 profile-pic px-3 pt-3 pb-12 rounded-2xl bg-white sm:flex-nowrap max-sm:w-6/12 ">
+                <img src="../img/ph-lise.png" alt="Foto presentación Liselen" class="border-4 border-solid border-black rounded-2xl bg-white">
+                <p class="text-center phrase mt-8">Lets grab a coffee</p>
+            </div>
+        </section>
+
+        <!-- Sección de experiencia -->
+        <section class="flex flex-wrap justify-center items-center mt-40 mb-40">
+            <h2 class="text-3xl w-full text-center">Experiencia</h2>
+            <div class=" flex flex-wrap justify-between w-4/5 mt-20">
+                <div class="box-border p-3.5 ">
+                    <a href="url_de_destino" >
+                        <span class="text-6xl material-symbols-outlined  hover:scale-125 transition duration-700" >
+                            bug_report
+                        </span>
+                    </a>
+                    <p class="text-center mt-2">Testing</p>
+                </div>
+                <div class=" box-border p-3.5">
+                    <a href="url_de_destino">
+                        <span class="text-6xl material-symbols-outlined  hover:scale-125 transition duration-700">
+                            draw
+                        </span>
+                    </a>
+                    <p class="text-center mt-2">Diseño</p>
+                </div>
+                <div class=" box-border p-3.5">
+                    <a href="url_de_destino">
+                        <span class="text-6xl material-symbols-outlined hover:scale-125 transition duration-700">
+                            code
+                        </span>
+                    </a>
+                    <p class="text-center mt-2">Desarrollo</p>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <section class="text-7xl font-medium mt-20 mb-40 w-full">
+        <div class="category w-full flex flex-wrap justify-between w-full scroll-container mb-10">
+            <div class="flex flex-nowrap justify-between  w-full  py-5 left-texts">
+                <a href="#" class="uppercase hover:text-cyan-600">diseño web</a>
+                <span> - </span>
+                <a href="#" class="uppercase hover:text-pink-600"> diseño ux/ui</a>
+            </div>
+        </div>
+        <div class="category w-full flex flex-wrap justify-between w-full mt-10 scroll-container">
+            <div class="flex flex-nowrap justify-between w-full py-5 right-texts">
+                <a href="#" class="uppercase hover:text-lime-600">ilustración</a>
+                <span> - </span>
+                <a href="#" class="uppercase hover:text-yellow-600">fotografía</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black">
+        <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
+        <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>
+    </footer>
+</body>
+</html>

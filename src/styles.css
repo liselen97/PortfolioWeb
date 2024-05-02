@@ -1,0 +1,122 @@
+
+* { 
+    margin:0;
+    padding:0;
+}
+
+body {
+    background-color: #0B0B0B;
+    width:100%;
+}
+
+/*Fondo para imagen del inicio */
+.profile-pic {
+    background-color: #F0EFEF;
+}
+
+/*Estilos para el texto de la foto del inicio */
+.phrase {
+    color:#0B0B0B;
+    font-style: italic;
+}
+
+/*Estilo para los iconos de la sección de experiencia*/
+.experience {
+    font-size: 80px; 
+}
+
+/*Estilos para el scroll automatico de los trabajos en inicio*/
+.scroll-container {
+    overflow-x: hidden;
+}
+
+
+/*Animación para los textos que van a moverse hacia derecha*/
+.left-texts {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: move-left 10s linear infinite;
+    -webkit-animation: move-left 10s linear infinite;
+    animation: move-left 10s linear infinite;
+}
+
+/*Animación para los textos que van a moverse hacia la derecha*/
+.right-texts {
+    text-align: right;
+
+    /* animation properties */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    -moz-animation: move-right 10s linear infinite;
+    -webkit-animation: move-right 10s linear infinite;
+    animation: move-right 10s linear infinite;
+}
+  
+/*Clase para la animación de las categorías*/
+.category {
+    background-color: #F0EFEF;
+    color: #0B0B0B;
+    width:100%
+} 
+
+
+
+/*Keyframes de animación a la izquierda*/
+@keyframes move-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+  
+  /* for Firefox */
+@-moz-keyframes move-left {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+    }
+
+    /* for Chrome */
+    @-webkit-keyframes move-left {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+/*Keyframes de animación a la derecha*/
+@keyframes move-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+  /* for Firefox */
+@-moz-keyframes move-right {
+    from { -moz-transform: translateX(-100%); }
+    to { -moz-transform: translateX(100%); }
+}
+    
+/* for Chrome */
+@-webkit-keyframes move-right {
+    from { -webkit-transform: translateX(-100%); }
+    to { -webkit-transform: translateX(100%); }
+}
+
+/*Al hacer hover se detiene la animación*/
+.right-texts:hover{
+    animation-play-state: paused;
+}
+
+.left-texts:hover{
+    animation-play-state: paused;
+}
+
+
