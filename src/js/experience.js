@@ -56,4 +56,19 @@ let datosPorCategoria = {
         }
     };
     
-    
+
+//       // Seleccione todos los elementos "a" dentro de .left-texts y .right-texts
+//   const anchorLinks = document.querySelectorAll('.left-texts a, .right-texts a');
+
+//   // Agregar un controlador de eventos para cada enlace
+//   anchorLinks.forEach(link => {
+//     link.addEventListener('mouseover', () => {
+//       // Detener la animación solo si el enlace se ha activado
+//       link.style.animationPlayState = 'paused';
+//     });
+
+//     link.addEventListener('mouseout', () => {
+//       // Reiniciar la animación cuando el mouse sale del enlace
+//       link.style.animationPlayState = 'running';
+//     });
+//   });

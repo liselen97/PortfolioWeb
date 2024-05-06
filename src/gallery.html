@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/experience.js" type="text/javascript"></script>
-    <script src="js/colorTheme.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <title>Experiencia</title>
+    <title>Ilustración y Fotografía</title>
 </head>
 <body class="text-white overflow-x-hidden">
     <aside class=" h-36 flex justify-center flex-wrap py-4 border-b-4">
@@ -36,14 +31,14 @@
             <div class="circle dark-2 border-2 border-solid border-white"></div>
         </div>
     </aside>
-    <header class="flex justify-end items-center my-5 w-3/5 m-auto">
+    <header class="flex justify-end items-center my-5 w-4/5 m-auto">
         <!-- Ocultar el botón en pantallas de tamaño sm o más grandes -->
         <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
             &#9776;
         </button>
         <nav class="hidden sm:block text-base space-x-8" aria-label="main">    
-            <a href="#">Experiencia</a>
-            <a href="#">Diseño</a>
+            <a href="experience.html?category=testing">Experiencia</a>
+            <a href="design.html">Diseño</a>
             <a href="#">Ilustración y Fotografía</a>
             <a href="#"> 
                 <span class="material-symbols-outlined">
@@ -52,27 +47,5 @@
             </a>
         </nav>
     </header>
-    <section class="flex flex-wrap justify-center items-center mt-20 w-3/5 mx-auto experience-section">
-        <h2 class="text-3xl w-full text-center mb-10 light">Experiencia</h2>
-        <div class="w-full flex justify-between items-center box-border">
-            <div class="w-3/12 bg-white text-black h-36 rounded-2xl p-3 flex flex-col justify-end">
-                <h3 class="uppercase font-bold text-xl" id="area"></h3>
-                <p class="text-sm pb-3.5 period" id="periodo"></p>
-
-            </div>
-            <div class="rol-job bg-white text-black h-36 rounded-2xl p-6 flex flex-col justify-center ">
-                <p class="enterprise">Hola</p>
-                <h3 class="uppercase font-bold text-xl" id="rol"></h3>
-
-            </div>
-        </div>
-        <div class="w-full mt-5">
-            <ol class="list-decimal w-full box-border bg-white text-black px-9 h-32 rounded-2xl p-3 flex flex-col justify-between" id="tareas">
-                <li class="task"></li>
-                <li class="task"></li>
-                <li class="task"></li>
-            </ol>   
-        </div>
-    </section>
 </body>
 </html>
