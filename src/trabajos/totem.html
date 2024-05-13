@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../js/animations.js" type="text/javascript"></script>
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.ico">
+    <title>Totem Matero</title>
+</head>
+<body class="text-white overflow-x-hidden">
+    <header class="flex justify-between items-center my-5 w-4/5 m-auto">
+        <!-- Oculta la hamburguesa en pantallas de tamaño sm o más grandes -->
+        <a href="../index.html"><img src="../../img/lise-logo.svg" alt="logo lp" class="w-8"></a>
+        <button id="hamburger-button" class="text-3xl md:hidden focus:outline-none">
+            &#9776;
+        </button>
+        <nav class="hidden md:block text-base space-x-8" aria-label="main">   
+            <a href="../index.html#jobs" class="menu-totem">Mis trabajos</a>
+            <a href="../gallery.html" class="menu-totem">Ilustración/Fotografía</a>
+        </nav>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden fixed inset-0 bg-nav-mobile flex justify-between items-center z-10 w-full py-5">
+        <div class="w-4/5 m-auto flex flex-wrap justify-end">
+                <button id="close-button" class="absolute top-5 text-5xl text-white focus:outline-none">
+                    &times;
+                </button>
+            <div class="text-white text-2xl space-y-8 w-full flex flex-col right-10">
+                <a href="../index.html#jobs" id="my-jobs">Mis trabajos</a>
+                <a href="../gallery.html" id="gallery">Ilustración/Fotografía</a>
+            </div>
+        </div>
+    </nav>
+    <section class="flex justify-between items-center mt-32 max-sm:flex-wrap max-sm:justify-center">
+        <div class="totem-border border-solid border-4 w-3/5 flex flex-wrap justify-start pr-10 py-10 max-lg:text-sm max-md:py-4  max-md:text-xs max-sm:w-full">
+            <div class="w-full ml-20">
+                <img src="../../img/totem-mate.svg" alt="logo mate" class="w-32 max-lg:w-20">
+            </div>
+            <p class="w-full ml-20">Es un totem que proporciona solución para las personas que se encuentran fuera de sus casas y frecuentan la necesidad de tomar mate.
+                Tiene opciones de compra de kits materos a elección, predefinidos o simplemente se combinan a gusto, y de compra individual de cualquiera de los productos disponibles. Además se puede reponer únicamente agua.</p>
+        </div>
+        <img src="../../img/trabajos/totem-mockup.png" alt="" class="w-1/4 mr-20 max-sm:w-2/5 max-sm:mt-10 max-sm:mr-0 max-md:h-fit">
+    </section>
+    <section class=" mt-32 parent slider-totem max-sm:mt-10">
+        <div class="pt-4 pb-4 wrap-image max-md:w-72">
+            <img src="../../img/trabajos/Inicio.jpg" alt="" class="child">
+            <img src="../../img/trabajos/kits predefinidos.jpg" alt="" class="child">
+            <img src="../../img/trabajos/ElecciónYerbas.jpg" alt="" class="child">
+            <img src="../../img/trabajos/Termo.jpg" alt="" class="child">
+        </div>
+    </section>
+    <section class="my-20 text-center">
+        <p class="text-sm mb-10">Trabajo realizado junto a Diego Rivero y Nicolás Sarubbi</p>
+        <a href="https://www.figma.com/design/HHjnM0o6ccPxmbzAEO9FGA/Untitled?node-id=0%3A1&t=A69fBxmT5S1SBXCJ-1" class="text-base totem-color px-9 py-2 w-fit border-solid totem-border border-2 flex items-center justify-between mx-auto  rounded-2xl">
+            <p class="mr-2">Figma </p>
+            <span class="material-symbols-outlined">
+            open_in_new
+            </span>
+        </a>
+    </section>
+    <section class="flex justify-between mb-10">
+        <div class=" ml-10">
+            <a href="edux.html" class="mx-4">
+                <span class="material-symbols-outlined slider-totem p-4 rounded-2xl text-black font-bold">
+                    arrow_back_ios
+                </span>
+            </a>    
+            <p class="text-center mt-2">Edux</p>
+        </div>    
+        <div class=" mr-10">
+            <a href="namisushi.html" class="mx-4">
+                <span class="material-symbols-outlined slider-totem p-4 rounded-2xl text-center text-black font-bold">
+                    arrow_forward_ios
+                </span>
+            </a>
+            <p class="mt-2">Nami Sushi</p>
+        </div>
+    </section>
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black max-md:text-xs">
+        <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
+        <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>
+    </footer>
+</body>
+</html>

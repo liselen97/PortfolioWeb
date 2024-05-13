@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../js/animations.js" type="text/javascript"></script>
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.ico">
+    <title>SV Crea</title>
+</head>
+<body class="text-white overflow-x-hidden">
+    <header class="flex justify-between items-center my-5 w-4/5 m-auto">
+        <!-- Oculta la hamburguesa en pantallas de tamaño sm o más grandes -->
+        <a href="../index.html"><img src="../../img/lise-logo.svg" alt="logo lp" class="w-8"></a>
+        <button id="hamburger-button" class="text-3xl md:hidden focus:outline-none">
+            &#9776;
+        </button>
+        <nav class="hidden md:block text-base space-x-8" aria-label="main">   
+            <a href="../index.html#jobs" class="hover:text-violet-300 duration-500">Mis trabajos</a>
+            <a href="../gallery.html" class="hover:text-violet-300 duration-500">Ilustración/Fotografía</a>
+        </nav>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden fixed inset-0 bg-nav-mobile flex justify-between items-center z-10 w-full py-5">
+        <div class="w-4/5 m-auto flex flex-wrap justify-end">
+                <button id="close-button" class="absolute top-5 text-5xl text-white focus:outline-none">
+                    &times;
+                </button>
+            <div class="text-white text-2xl space-y-8 w-full flex flex-col right-10">
+                <a href="../index.html#jobs" id="my-jobs">Mis trabajos</a>
+                <a href="../gallery.html" id="gallery">Ilustración/Fotografía</a>
+            </div>
+        </div>
+    </nav>
+    <section class="flex justify-between items-center mt-32 max-md:flex-wrap max-md:justify-center">
+        <div class="border-violet-300 border-solid border-4 w-3/5 flex flex-wrap justify-start pr-10 py-10 max-lg:text-sm max-md:py-4  max-md:text-xs max-md:w-full">
+            <div class="w-full ml-20">
+                <img src="../../img/trabajos/SV-logo 1.svg" alt="logo mate" class="w-30 bg-white max-sm:w-20 max-md:w-14 rounded-2xl">
+            </div>
+            <p class="w-full ml-20 max-lg:pb-8 max-lg:mt-4 lg:mt-8">SV Crea es un emprendimiento familiar, iniciado por mi madre, el cual decidí utilizar para realizar mi proyecto web. Se hicieron wireframes y luego prototipos de alta fidelidad con las interacciones correspondientes.<br>El prototipo mobile también tiene su adaptación desktop.<br><br>
+                Las fotografías fueron tomadas por mi para poder realizar el prototipo de un sitio lo bastante real.
+            </p>
+        </div>
+        <video width="20%" height="180" controls preload loop autoplay class=" mr-20 max-md:w-2/5 max-md:mt-10 max-md:mr-0 ">
+            <source src="../../img/trabajos/svcrea-prototype.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class=" mt-32 parent bg-violet-300 max-sm:mt-10">
+        <div class="pt-4 pb-4 wrap-image max-sm:w-72">
+            <img src="../../img/trabajos/svcrea1.jpg" alt="" class="child">
+            <img src="../../img/trabajos/svcrea2.jpg" alt="" class="child">
+            <img src="../../img/trabajos/svcrea3.jpg" alt="" class="child">
+            <img src="../../img/trabajos/svcrea4.jpg" alt="" class="child">
+            <img src="../../img/trabajos/svcrea5.jpg" alt="" class="child">
+        </div>
+    </section>
+    <section class="my-20 text-center">
+        <p class="text-sm mb-10">Prototipo versión desktop y mobile en link a figma</p>
+        <a href="https://www.figma.com/design/IJLG8WlxegM4mJE6xvTTR2/SV-Crea?node-id=64%3A3&t=At8NPb1nKMIarnV8-1" class="text-base border-violet-300 px-9 py-2 w-fit border-solid  border-2 flex items-center justify-between mx-auto  rounded-2xl hover:text-violet-300 duration-500">
+            <p class="mr-2">Figma </p>
+            <span class="material-symbols-outlined">
+            open_in_new
+            </span>
+        </a>
+    </section>
+    <section class="flex justify-between mb-10">
+        <div class=" ml-10">
+            <a href="petitsweets.html" class="mx-8">
+                <span class="material-symbols-outlined bg-violet-300 p-4 rounded-2xl text-black font-bold ">
+                    arrow_back_ios
+                </span>
+            </a>    
+            <p class="text-center mt-2">Petit Sweets</p>
+        </div>    
+        <div class=" mr-10">
+            <a href="palacestudio.html" class="mx-8">
+                <span class="material-symbols-outlined bg-violet-300 p-4 rounded-2xl text-center text-black font-bold">
+                    arrow_forward_ios
+                </span>
+            </a>
+            <p class="mt-2 text-center">Palace Studio</p>
+        </div>
+    </section>
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black max-md:text-xs">
+        <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
+        <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>
+    </footer>
+</body>
+</html>

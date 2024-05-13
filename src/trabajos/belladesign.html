@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../js/animations.js" type="text/javascript"></script>
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.ico">
+    <title>Bella Makeup</title>
+</head>
+<body class="text-white overflow-x-hidden">
+    <header class="flex justify-between items-center my-5 w-4/5 m-auto">
+        <!-- Oculta la hamburguesa en pantallas de tamaño sm o más grandes -->
+        <a href="../index.html"><img src="../../img/lise-logo.svg" alt="logo lp" class="w-8"></a>
+        <button id="hamburger-button" class="text-3xl md:hidden focus:outline-none">
+            &#9776;
+        </button>
+        <nav class="hidden md:block text-base space-x-8" aria-label="main">   
+            <a href="../index.html#jobs" class="hover:text-pink-400 duration-500">Mis trabajos</a>
+            <a href="../gallery.html" class="hover:text-pink-400 duration-500">Ilustración/Fotografía</a>
+        </nav>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden fixed inset-0 bg-nav-mobile flex justify-between items-center z-10 w-full py-5">
+        <div class="w-4/5 m-auto flex flex-wrap justify-end">
+                <button id="close-button" class="absolute top-5 text-5xl text-white focus:outline-none">
+                    &times;
+                </button>
+            <div class="text-white text-2xl space-y-8 w-full flex flex-col right-10">
+                <a href="../index.html#jobs" id="my-jobs">Mis trabajos</a>
+                <a href="../gallery.html" id="gallery">Ilustración/Fotografía</a>
+            </div>
+        </div>
+    </nav>
+    <section class="flex justify-between items-center mt-32 max-sm:flex-wrap max-sm:justify-center">
+        <div class="border-pink-400 border-solid border-4 w-3/5 flex flex-wrap justify-start pr-10 py-10 max-lg:text-sm max-md:py-4  max-sm:text-xs max-sm:w-full">
+            <div class="w-full ml-20">
+                <img src="../../img/bella-makeup.png" alt="logo" class="w-28 max-md:w-20">
+            </div>
+            <p class="w-full ml-20 ">E-commerce de maquillaje y accesorios. <br> Se realizaron prototipos para desktop y mobile de baja y alta fidelidad para diversas secciones. Se diseñaron todos los componentes, como sliders, botones, entre otros.
+            </p>
+        </div>
+        <video width="20%" height="180" controls preload loop autoplay class=" mr-20 max-sm:w-2/5 max-sm:mt-10 max-sm:mr-0 ">
+            <source src="../../img/trabajos/bella-prototype.mp4" type="video/mp4">
+        </video>
+    </section>
+    <section class=" mt-32 parent bg-pink-400 max-sm:mt-10">
+        <div class="pt-4 pb-4 wrap-image max-sm:w-72">
+            <img src="../../img/trabajos/designbella3.jpg" alt="" class="child">
+            <img src="../../img/trabajos/designbella2.jpg" alt="" class="child">
+            <img src="../../img/trabajos/designbella1.jpg" alt="" class="child">
+            <img src="../../img/trabajos/designbella4.jpg" alt="" class="child">
+        </div>
+    </section>
+    <section class="my-20 text-center">
+        <p class="text-sm mb-10">Prototipo versión desktop y mobile en link a figma</p>
+        <a href="https://www.figma.com/design/Z1GizYDCqqGf0bzmOf904f/MOBILE-MAKEUP?node-id=218%3A10676&t=At8NPb1nKMIarnV8-1" class="text-base border-pink-400 px-9 py-2 w-fit border-solid  border-2 flex items-center justify-between mx-auto  rounded-2xl hover:text-pink-400 duration-500">
+            <p class="mr-2">Figma </p>
+            <span class="material-symbols-outlined">
+            open_in_new
+            </span>
+        </a>
+    </section>
+    <section class="flex justify-between mb-10">
+        <div class=" ml-10">
+            <a href="palacestudio.html" class="mx-8">
+                <span class="material-symbols-outlined bg-pink-400 p-4 rounded-2xl text-black font-bold ">
+                    arrow_back_ios
+                </span>
+            </a>    
+            <p class="text-center mt-2">Palace Studio</p>
+        </div>    
+        <div class=" mr-10">
+            <a href="../gallery.html" class="mx-8">
+                <span class="material-symbols-outlined bg-pink-400 p-4 rounded-2xl text-center text-black font-bold">
+                    arrow_forward_ios
+                </span>
+            </a>
+            <p class="mt-2 text-center">Ilustración</p>
+        </div>
+    </section>
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black max-md:text-xs">
+        <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
+        <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>
+    </footer>
+</body>
+</html>

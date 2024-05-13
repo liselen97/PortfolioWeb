@@ -3,120 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles.css">
-    <script src="js/experience.js" type="text/javascript"></script>
-    <script src="js/colorTheme.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon.ico">
     <title>Liselen Pannella - Web Design</title>
 </head>
 <body class="text-white overflow-x-hidden">
-    <aside class="hidden h-36 flex justify-center flex-wrap py-4 border-b-4" id="theme-options">
-        <div class="w-full flex justify-end mr-4">
-            <a href="#" id="close-button">
-                <icon class="material-symbols-outlined">
-                    close
-                </icon>
-            </a>    
-        </div>
-        
-        <div id="coffee-theme" class="h-20 w-28 p-1 border-2 border-solid border-white rounded-2xl mr-8 flex flex-wrap justify-evenly bg-yellow-800"> 
-            <p class="w-full text-center text-sm">Coffee time</p>
-            <div class="circle coffee-1 border-2 border-solid border-white"></div>
-            <div class="circle coffee-2 border-2 border-solid border-white"></div>
-        </div>
-        <div id="spoty-theme" class="h-20 w-28 p-1 border-2 border-solid border-white rounded-2xl mr-8 flex flex-wrap justify-evenly bg-green-700">
-            <p class="w-full text-center text-sm">Spoty time</p>
-            <div class="circle border-2 border-solid border-white bg-lime-800"></div>
-            <div class="circle border-2 border-solid border-white bg-green-400"></div>
-        </div>
-        <div id="dark-theme" class="h-20 w-28 p-1 border-2 border-solid border-white rounded-2xl flex flex-wrap justify-evenly bg-neutral-800">
-            <p class="w-full text-center text-sm">Dark time</p>
-            <div class="circle dark-1 border-2 border-solid border-white"></div>
-            <div class="circle dark-2 border-2 border-solid border-white"></div>
-        </div>
-    </aside>
-    <header class="flex justify-end items-center my-5 w-4/5 m-auto">
-        <!-- Ocultar el botón en pantallas de tamaño sm o más grandes -->
-        <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+    <header class="flex justify-between items-center my-5 w-4/5 m-auto">
+        <!-- Oculta la hamburguesa en pantallas de tamaño sm o más grandes -->
+        <a href="index.html"><img src="../img/lise-logo.svg" alt="logo lp" class="w-8"></a>
+        <button id="hamburger-button" class="text-3xl md:hidden focus:outline-none">
             &#9776;
         </button>
-        <nav class="hidden sm:block text-base space-x-8" aria-label="main">    
-            <a href="experience.html?category=testing">Experiencia</a>
-            <a href="design.html">Diseño</a>
-            <a href="#">Ilustración y Fotografía</a>
-            <a href="#" id="theme-selector"> 
-                <span class="material-symbols-outlined">
-                palette
-                </span>
-            </a>
+        <nav class="hidden md:block text-base space-x-8" aria-label="main">   
+            <a href="#jobs" class="color-inicio">Mis trabajos</a>
+            <a href="gallery.html" class="color-inicio">Ilustración/Fotografía</a>
         </nav>
     </header>
-    
-    <main class="w-4/5 m-auto">
-        <!-- Abstract/presentación -->
-        <section class="mt-20 flex justify-between flex-wrap w-full">
-            <div class="sm:w-1/2">
-                <h1 class="text-5xl font-bold mb-8 fadeInFromBottomTitle lightColor">Hello World!</h1>
-                <p class="fadeInFromBottomTitle">Soy Liselen, una apasionada diseñadora web de Montevideo, Uruguay, con experiencia como Frontend Developer y Testing Specialist en IBM. Fuera del trabajo, encuentro inspiración en la fotografía, la ilustración, la danza y la música, así como de una buena taza de café.</p>
-            </div>
-            <div class="w-2/6 profile-pic px-3 pt-3 pb-12 rounded-2xl bg-white sm:flex-nowrap max-sm:w-6/12 bgColor">
-                <img src="../img/ph-lise.png" alt="Foto presentación Liselen" class="border-4 border-solid border-black rounded-2xl bg-white">
-                <p class="text-center phrase mt-8">Lets grab a coffee ✨</p>
-            </div>
-        </section>
-
-        <!-- Sección de experiencia --> 
-        <section class="flex flex-wrap justify-center items-center mt-40 mb-40 hidden">
-            <h2 class="text-3xl w-full text-center">Experiencia</h2>
-            <div class=" flex flex-wrap justify-between w-4/5 mt-20">
-                <div class="box-border p-3.5 ">
-                    <a href="experience.html?category=testing" class="btn-testing">
-                        <span class="text-6xl material-symbols-outlined  hover:scale-125 transition duration-700" >
-                            bug_report
-                        </span>
-                    </a>
-                    <p class="text-center mt-2">Testing</p>
-                </div>
-                <div class=" box-border p-3.5">
-                    <a href="experience.html?category=diseño" class="btn-diseño">
-                        <span class="text-6xl material-symbols-outlined  hover:scale-125 transition duration-700">
-                            draw
-                        </span>
-                    </a>
-                    <p class="text-center mt-2">Diseño</p>
-                </div>
-                <div class=" box-border p-3.5">
-                    <a href="experience.html?category=desarrollo" class="btn-desarrollo">
-                        <span class="text-6xl material-symbols-outlined hover:scale-125 transition duration-700">
-                            code
-                        </span>
-                    </a>
-                    <p class="text-center mt-2">Desarrollo</p>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    <section class="text-7xl font-medium mt-20 mb-40 w-full">
-        <div class="category w-full flex flex-wrap justify-between w-full scroll-container mb-10 bgColor">
-            <div class="flex flex-nowrap justify-between  w-full  py-5 left-texts">
-                <a href="#" class="uppercase hover:text-cyan-600">diseño web</a>
-                <b class="guion"> - </b>
-                <a href="#" class="uppercase hover:text-pink-600"> diseño ux/ui</a>
-            </div>
-        </div> 
-        <div class="category w-full flex flex-wrap justify-between w-full mt-10 scroll-container bgColor">
-            <div class="flex flex-nowrap justify-between w-full py-5 right-texts">
-                <a href="#" class="uppercase hover:text-lime-600">ilustración</a>
-                <b> - </b>
-                <a href="#" class="uppercase hover:text-yellow-600">fotografía</a>
+    <nav id="mobile-nav" class="hidden md:hidden fixed inset-0 bg-nav-mobile flex justify-between items-center z-10 w-full py-5">
+        <div class="w-4/5 m-auto flex flex-wrap justify-end">
+                <button id="close-button" class="absolute top-5 text-5xl text-white focus:outline-none">
+                    &times;
+                </button>
+            <div class="text-white text-2xl space-y-8 w-full flex flex-col right-10">
+                <a href="#jobs" id="my-jobs" >Mis trabajos</a>
+                <a href="gallery.html" id="gallery">Ilustración/Fotografía</a>
             </div>
         </div>
-        
+    </nav>
+
+    <main class="w-4/5 m-auto">
+        <!-- Abstract/presentación -->
+        <section class="mt-20 flex justify-between flex-wrap w-full max-md:justify-center">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-5xl font-bold mb-8 fadeInFromBottomTitle name-color">Liselen Pannella</h1>
+                <p class="fadeInFromBottomTitle description">Soy Liselen, una apasionada por el diseño web, nacida en Montevideo, Uruguay, con experiencia como Frontend Developer y Especialista en Pruebas en IBM. Fuera del trabajo acostumbro buscar inspiración en la ilustración, la fotografía , la danza y la música, así como de un buen café, y si es de especialidad, mejor.
+                     <br><br>
+                    A continuación les presento algunas áreas que se cruzaron en mi camino con muchos desafíos y se ganaron mi corazón.
+                </p>
+                <div class="w-24 flex justify-between mt-8 fadeInFromBottomTitle">
+                    <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank"><img src="../img/logotipo-de-linkedin.png" alt="linkedin" class="social-media"></a>
+                    <a href="https://www.behance.net/liselenpannella" target="_blank"><img src="../img/behance.png" alt="linkedin" class="social-media"></a>
+                </div>
+            </div>
+            <div class="w-8/12 md:w-2/6 px-3 pt-3 pb-12 rounded-2xl sm:flex-nowrap max-md:mt-10">
+                <img src="../img/photo.png" alt="Foto presentación Liselen" class="border-2 border-solid rounded-2xl bg-color">
+            </div>  
+        </section>
+    </main>
+    <section class="text-3xl font-bold mt-20 mb-40 w-full xl:text-5xl max-sm:text-2xl">
+        <div class="category w-full flex flex-wrap justify-between w-full scroll-container mb-10">
+            <div class="flex flex-nowrap justify-between  w-full  py-5 left-texts">
+                <p>Diseño</p>
+                <p>Testing</p>
+                <p>Desarrollo Web</p>
+                <p>Diseño UX/UI</p>
+            </div>
+        </div> 
+        <div class="category w-full flex flex-wrap justify-between w-full mt-10 scroll-container">
+            <div class="flex flex-nowrap justify-between w-full py-5 right-texts">
+                <p>Ilustración</p>
+                <p>Fotografía</p>
+                <p>Identidad de Marca</p>
+            </div>
+        </div>
+    </section>
+    <section class="w-3/4 m-auto" id="jobs">
+        <h2 class="mt-20 text-3xl font-bold tex w-full text-center mb-20 py-5">Mis trabajos</h2>
+        <div class="w-full flex flex-wrap justify-center m-auto">
+            <a href="trabajos/edux.html" class="article-work mr-10">
+                <article class="w-full h-72 border-solid border-fuchsia-500 border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500 " data-tilt>
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <img src="../img/trabajos/edux-byn.svg" alt="imagen corporativa edux" class="w-32 max-w-screen-md:px-8">
+                    </div>
+                    <div class="border-t-2 border-solid border-fuchsia-500 w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            brand_family
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/totem.html" class="article-work mr-10 max-w-screen-sm:mr-0">
+                <article class="w-full h-72 border-solid border-2 flex justify-center flex-wrap items-center totem-border lg:hover:scale-110 lg:duration-500 ">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <img src="../img/totem-mate.svg" alt="totem mate logo" class="w-32">
+                    </div>
+                    <div class="border-t-2 border-solid w-full text-right totem-border flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            devices
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/namisushi.html" class="article-work">
+                <article class=" w-full h-72 border-solid border-2 flex justify-center flex-wrap items-center nami-border lg:hover:scale-110 lg:duration-500 ">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <p class=" text-center text-3xl font-bold">Nami<br>Sushi</p>
+                    </div>
+                    <div class="border-t-2 border-solid w-full text-right nami-border flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            code
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/petitsweets.html" class="article-work mr-10">
+                <article class="w-full h-72 border-solid border-petit border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <p class=" text-center text-3xl font-bold">Petit<br>Sweets</p>
+                    </div>
+                    <div class="border-t-2 border-solid border-petit w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            code
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/svcrea.html" class="article-work mr-10">
+                <article class="w-full h-72 border-solid border-violet-300 border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <img src="../img/trabajos/SV-logo 1.svg" alt="" class="bg-white w-32 rounded-2xl">
+                        <!-- <p class=" text-center text-3xl font-bold">SV<br>Crea</p> -->
+                    </div>
+                    <div class="border-t-2 border-solid border-violet-300 w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            devices
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/palacestudio.html" class="article-work">
+                <article class="w-full h-72 border-solid border-palace border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <img src="../img/trabajos/newlogo.webp" alt="logo maquillaje" class="w-32">
+                    </div>
+                    <div class="border-t-2 border-solid border-palace w-full flex justify-end items-centert">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                        code
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="trabajos/belladesign.html" class="article-work mr-10">
+                <article class="w-full h-72 border-solid border-pink-400 border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <img src="../img/bella-makeup.png" alt="logo maquillaje" class="w-32">
+                    </div>
+                    <div class="border-t-2 border-solid border-pink-400 w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            devices
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="gallery.html" class="article-work mr-10">
+                <article class="h-72 border-solid border-gallery border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <p class="text-3xl font-bold text-center">Ilustración<br>Varias</p>
+                    </div>
+                    <div class="border-t-2 border-solid border-gallery w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            draw
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="gallery.html" class="article-work">
+                <article class="h-72 border-solid border-collage border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <p class="text-3xl font-bold text-center">Técnica<br>Collage</p>
+                    </div>
+                    <div class="border-t-2 border-solid border-collage w-full flex justify-end items-center"> <span class="material-symbols-outlined mr-4 pt-2">
+                        draw_collage
+                        </span>
+                    </div> 
+                </article>
+            </a>
+            <a href="gallery.html" class="article-work">
+                <article class="h-72 border-solid border-photography border-2 flex justify-center flex-wrap items-center lg:hover:scale-110 lg:duration-500">
+                    <div class="h-48 flex items-center w-full justify-center">
+                        <p class="text-3xl font-bold text-center">Fotografía<br>Productos</p>
+                    </div>
+                    <div class="border-t-2 border-solid border-photography w-full flex justify-end items-center">
+                        <span class="material-symbols-outlined mr-4 pt-2">
+                            photo_camera
+                        </span>
+                    </div> 
+                </article>
+            </a>
+        </div>
     </section>
 
-    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black">
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black max-md:text-xs">
         <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
         <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
         <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>

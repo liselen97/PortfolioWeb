@@ -3,22 +3,127 @@
     margin:0;
     padding:0;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-color: black;
+    background-color: #1B0B1E;
     width:100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/*Fondo para imagen del inicio */
-.profile-pic, .dark-2 {
+nav a {
+    display: inline-block;
+}
+
+nav a: after{
+    display: block;
+    content: '';
+    border-bottom: 3px solid yellow;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:  0% 50%; 
+}
+
+nav a:hover:after {
+     transform: scaleX(1);
+}
+
+.bg-color {
+    background: linear-gradient(#FDF4A6, #D753CA);
+    border-color: #D753CA;
+}
+
+.color-inicio:hover {
+    color: #D753CA;
+    transition: 0.5s;
+}
+
+.name-color {
+    color: #FCF3D1;
+}
+
+.description  {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.social-media {
+    width:32px;
+} 
+
+.article-work {
+    width:25%;
+    margin-bottom: 40px;
+} 
+
+/*Responsive*/
+@media (max-width: 640px) {
+    .article-work {
+        width:70%;
+        margin: 0 0 40px 0 !important;
+    } 
+}
+
+@media (min-width: 640px) and (max-width: 768px) {
+    .article-work {
+        width:45%;
+        margin: 0 10px 40px 0 !important
+    } 
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .article-work {
+        width:35%;
+        margin: 0 10px 40px 0 !important
+    } 
+}
+
+.article-work article {
+    border-radius: 15px;
+} 
+
+.nami-border {
+    border-color: #F3646D
+}
+
+.totem-border {
+    border-color: #81F364;
+}
+
+.totem-color:hover {
+    color: #81F364;
+    transition: 0.5s;
+}
+
+.border-petit {
+    border-color: #EFDC79
+}
+
+.border-gallery {
+    border-color: #9CF0CD
+}
+
+.border-photography {
+    border-color: #FF701F;
+}
+
+/*Clase para la animación de las areas que me gustan*/
+.category {
     background-color: #F0EFEF;
-}
+    color: #0B0B0B;
+    width:100%;
+    border: 8px solid  #F0EFEF;
+} 
 
-/*Estilos para el texto de la foto del inicio */
-.phrase {
-    color:#0B0B0B;
-    font-style: italic;
-}
+.category:hover {
+    border: 8px solid;
+    border-image: linear-gradient(45deg, #AC54CB, #D753CA, #9CF0CD, #EFDC79) 1;  
+    transition: 3s;
+} 
 
 /*Estilo para los iconos de la sección de experiencia*/
 .experience {
@@ -30,48 +135,6 @@ body {
     overflow-x: hidden;
 }
 
-/*Estilos de animación para la sección de selección de temas para la pagina*/
-@keyframes slideOut {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-}
-
-.slide-out {
-    animation: slideOut 0.5s forwards;
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.slide-in {
-    animation: slideIn 0.5s forwards;
-}
-
-header, main, section, footer {
-    transition: transform 0.5s ease; /* Usar la misma duración que la animación de cierre */
-}
-
-/* Desplazamiento suave del contenido cuando el aside está abierto */
-body.close-themes-selector header,
-body.close-themes-selector main,
-body.close-themes-selector section,
-body.close-themes-selector footer {
-    transition: transform 0.5s ease; /* Ajustar la duración según la animación del aside */
-}
 
 /*Animación para los textos que van a moverse hacia derecha*/
 .left-texts {
@@ -98,15 +161,6 @@ body.close-themes-selector footer {
     -webkit-animation: move-right 10s linear infinite;
     animation: move-right 10s linear infinite;
 }
-  
-/*Clase para la animación de las categorías*/
-.category {
-    background-color: #F0EFEF;
-    color: #0B0B0B;
-    width:100%
-} 
-
-
 
 /*Keyframes de animación a la izquierda*/
 @keyframes move-left {
@@ -152,35 +206,8 @@ body.close-themes-selector footer {
     to { -webkit-transform: translateX(100%); }
 }
 
-/*Al hacer hover se detiene la animación*/
-.right-texts:hover{
-    animation-play-state: paused !important;
-}
-
-.left-texts:hover{
-    animation-play-state: paused !important;
-}
-
 .rol-job {
     width: 72%
-}
-
-.circle {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-}
-
-.coffee-1 {
-    background: #92714B;
-}
-
-.coffee-2 {
-    background: #FDF4A6;
-}
-
-.dark-1 {
-    background:#0B0B0B;
 }
 
 @keyframes fadeInFromBottom {
@@ -192,9 +219,201 @@ body.close-themes-selector footer {
       opacity: 1;
       transform: translateY(0);
     }
-  }
+}
 
-  .fadeInFromBottomTitle {
+.fadeInFromBottomTitle {
     animation: fadeInFromBottom 1s ease-out;
-  }
+}
 
+
+
+/* Totem */
+
+.parent {
+    background: #81F364;
+    overflow-x: hidden; 
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    .thumbnails-list{
+        cursor: pointer;
+    }
+}
+
+.parent div {
+    display:flex
+}
+
+.child {
+    width: 400px;
+    margin: 0 15px;
+    height:auto;
+}
+
+.parent:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.slider-totem {
+    background: #81F364;
+}
+
+.menu-totem:hover {
+    color: #81F364;
+    transition: 0.5s;
+}
+/* EDUX */
+
+.bg-edux {
+   background: #F0EFEF
+}
+
+/* Nami Sushi */
+.slider-nami {
+    background: #F3646D;
+}
+
+.nami-hover:hover {
+    color: #F3646D;
+    transition: 0.5s;
+}
+
+.nami-experience:hover {
+    color: #F3646D;
+    transition: 0.5s;
+}
+
+.nami-jobs:hover {
+    color: #F3646D;
+    transition: 0.5s;
+}
+
+.nami-gallery:hover {
+    color: #F3646D;
+    transition: 0.5s;
+}
+
+/* Menu hamburguesa */
+.bg-nav-mobile {
+    background: #1B0B1E
+}
+
+#mobile-nav
+{
+    animation: openNav 0.6s;
+}
+
+@keyframes openNav {
+    0% {
+      right: -462px;
+      opacity: 0;
+    }
+
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+}
+
+@keyframes closeNav {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+
+    100% {
+        right: -462px;
+        opacity: 0;
+    }
+}
+
+
+/* Gallery */
+.div-imagen {
+    position:relative;
+    cursor:pointer;
+  }
+  
+.div-imagen > div {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:-1;
+    margin:0;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.desvanecer:hover {
+    opacity: 0.5;
+    -webkit-transition: opacity 500ms;
+    -moz-transition: opacity 500ms;
+    -o-transition: opacity 500ms;
+    -ms-transition: opacity 500ms;
+    transition: opacity 500ms;
+}
+
+/* Petit */
+.slider-petit {
+    background: #EFDC79;
+}
+
+.petit-text {
+    color: #EFDC79;
+}
+
+.petit-hover:hover {
+    color: #EFDC79;
+    transition: 0.5s;
+}
+
+
+/* Palace */
+.border-palace {
+    border-color: #9D3CFF;
+}
+
+.bg-palace {
+    background: #9D3CFF;
+}
+
+.text-palace {
+    color: #9D3CFF;
+}
+
+.palace-hover:hover {
+    color: #9D3CFF;
+    transition: 0.5s;
+}
+
+.color-palace {
+    color: #9D3CFF;
+}
+
+.color-hover:hover {
+    color: #9D3CFF;
+    transition: 0.5s;
+}
+
+/* Collage */
+.border-collage {
+    border-color: #0C33FE;
+}
+
+.bg-collage {
+    background: #0C33FE;
+}
+
+/* Ilustración */
+.bg-ilustracion {
+    background: #9CF0CD
+}
+
+.menu-gallery:hover {
+    color: #9CF0CD; 
+    transition: 0.5s;
+}

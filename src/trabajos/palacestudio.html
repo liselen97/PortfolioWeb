@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="../js/animations.js" type="text/javascript"></script>
+    <script src="../js/menu.js" type="text/javascript"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon.ico">
+    <title>Palace Studio</title>
+</head>
+<body class="text-white overflow-x-hidden">
+    <header class="flex justify-between items-center my-5 w-4/5 m-auto">
+        <!-- Oculta la hamburguesa en pantallas de tamaño sm o más grandes -->
+        <a href="../index.html"><img src="../../img/lise-logo.svg" alt="logo lp" class="w-8"></a>
+        <button id="hamburger-button" class="text-3xl md:hidden focus:outline-none">
+            &#9776;
+        </button>
+        <nav class="hidden md:block text-base space-x-8" aria-label="main">   
+            <a href="../index.html#jobs" class="color-hover">Mis trabajos</a>
+            <a href="../gallery.html" class="color-hover">Ilustración/Fotografía</a>
+        </nav>
+    </header>
+    <nav id="mobile-nav" class="hidden md:hidden fixed inset-0 bg-nav-mobile flex justify-between items-center z-10 w-full py-5">
+        <div class="w-4/5 m-auto flex flex-wrap justify-end">
+                <button id="close-button" class="absolute top-5 text-5xl text-white focus:outline-none">
+                    &times;
+                </button>
+            <div class="text-white text-2xl space-y-8 w-full flex flex-col right-10">
+                <a href="../index.html#jobs" id="my-jobs">Mis trabajos</a>
+                <a href="../gallery.html" id="gallery">Ilustración/Fotografía</a>
+            </div>
+        </div>
+    </nav>
+    <section class="mt-32 w-4/5 m-auto items-center flex justify-between max-md:flex-wrap max-md:justify-center max-md:flex-col-reverse">
+        <video width="50%" height="240" controls preload loop autoplay class="max-md:w-9/12 max-md:mt-10">
+            <source src="../../img/trabajos/palace studio.mp4" type="video/mp4">
+        </video> 
+        <div class="border-palace border-solid border-4 w-2/5 rounded-2xl p-5 max-lg:text-sm max-md:py-4  max-sm:text-xs max-md:w-full">
+            <h2 class="font-bold text-2xl mb-5">Palace Studio</h2>
+            <p>Es un sitio web basado en una academia de danza reconocida que me apasiona mucho. <br> Fue realizado en la asignatura de Diseño Web 1 aplicando float para la estructura.</p>
+            <div class="flex mt-10">
+                <img src="../../img/trabajos/css-3.png" class="h-8 mr-5" alt="logo css">
+                <img src="../../img/trabajos/html-5.png" class="h-8" alt="logo css">
+            </div>  
+        </div>
+    </section>
+    <section class=" mt-32 parent bg-palace mb-20 max-md:mt-10">
+        <div class="pt-4 pb-4 wrap-image max-md:w-72">
+            <img src="../../img/trabajos/palacestudio1.jpg" alt="" class="child">
+            <img src="../../img/trabajos/palacestudio2.jpg" alt="" class="child">
+            <img src="../../img/trabajos/palacestudio3.jpg" alt="" class="child">
+            <img src="../../img/trabajos/palacestudio4.jpg" alt="" class="child">
+            <img src="../../img/trabajos/palacestudio5.jpg" alt="" class="child">
+            <img src="../../img/trabajos/palacestudio6.jpg" alt="" class="child">
+        </div>
+    </section>
+    <section class="my-20 text-center">
+        <p class="text-sm mb-10">Código completo en Github</p>
+        <a href="https://github.com/liselen97/Palace-Studio" class="text-base palace-hover border-palace px-9 py-2 w-fit border-solid border-2 flex items-center justify-between mx-auto  rounded-2xl">
+            <p class="mr-2">Github</p>
+            <span class="material-symbols-outlined">
+            open_in_new
+            </span>
+        </a>
+    </section>
+    <section class="flex justify-between mb-10">
+        <div class=" ml-10">
+            <a href="svcrea.html" class="mx-8">
+                <span class="material-symbols-outlined bg-palace p-4 rounded-2xl text-white font-bold ">
+                    arrow_back_ios
+                </span>
+            </a>    
+            <p class="text-center mt-2">SV Crea</p>
+        </div>    
+        <div class=" mr-10">
+            <a href="belladesign.html" class="mx-8">
+                <span class="material-symbols-outlined bg-palace p-4 rounded-2xl text-center text-white font-bold">
+                    arrow_forward_ios
+                </span>
+            </a>
+            <p class="mt-2 text-center">Bella Makeup</p>
+        </div>
+    </section>
+    <footer class="h-fit py-4 flex justify-around flex-nowrap bg-white text-black border-4 border-solid border-black max-md:text-xs">
+        <a href="mailto:liselenpannella@gmail.com">liselenpannella@gmail.com</a>
+        <a href="https://www.linkedin.com/in/liselenpannella/" target="_blank">in/liselenpannella</a>
+        <a href="https://www.behance.net/liselenpannella" target="_blank">be/liselenpannella</a>
+    </footer>
+</body>
+</html>
